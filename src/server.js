@@ -17,4 +17,6 @@ const resolvers = {
 
 const server = new GraphQLServer({ typeDefs, resolvers });
 
+server.express.use(logger("dev"));// express 서버에서 logger 미들웨어를 사용하도록 해줌.
+
 server.start({ port: PORT }, () => console.log(`Server running on http://localhost:${PORT}`));
