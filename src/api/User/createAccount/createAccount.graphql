@@ -1,0 +1,14 @@
+type Mutation{
+
+    createAccount(username: String
+    email: String
+    firstName: String
+    lastName: String
+    bio: String
+    ): User!  # --> 리턴 값이다. 
+
+}
+
+type Query{
+    something: String! 
+}
