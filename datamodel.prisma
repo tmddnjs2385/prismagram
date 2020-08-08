@@ -11,6 +11,8 @@ type User {
   likes: [Like!]! 
   comments: [Comment!]! 
   rooms: [Room!]!
+  loginSecret: String
+
 }
 
 type Post {
@@ -51,6 +53,6 @@ type Room{
 type Message{
   id: ID! @id
   text: String!
-  from: User!
-  to: User!
+  from: User! @relation(name: "From")
+  to: User! @relation(name: "To")
 }
